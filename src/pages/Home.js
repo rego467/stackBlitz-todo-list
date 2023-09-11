@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CardTodo from '../pages/CardTodo';
-import EditTodo from '../pages/EditTodo';
 import Navbar from '../component/Navbar';
 import { db } from '../firebase';
+import FormSearch from '../component/FormSearch';
 
 import { useQuery } from 'react-query';
 import { collection, getDocs } from 'firebase/firestore';
@@ -14,8 +14,9 @@ const fetchNotes = async () => {
 };
 
 const Home = () => {
+  const [textForm, setTextForm] = useState('');
   const { data, error, isLoading } = useQuery({
-    queryKey: ['notes'],
+    queryKey: ['notes', textForm],
     queryFn: fetchNotes,
   });
 
@@ -31,18 +32,26 @@ const Home = () => {
     return <h1>eror:{error.message}</h1>;
   }
 
+  console.log(textForm, 'from');
   return (
     <div className="container">
       <Navbar />
-
+      <div>
+        <FormSearch setTextForm={setTextForm} />
+      </div>
       <div className="main">
-        {data.map((note) => {
-          return (
-            <div key={note.id} className="main-card">
-              <CardTodo todo={note} />
-            </div>
-          );
-        })}
+        {data
+          .filter(
+            (note) =>
+              note.judul.includes(textForm) || note.content.includes(textForm)
+          )
+          .map((note) => {
+            return (
+              <div key={note.id} className="main-card">
+                <CardTodo todo={note} />
+              </div>
+            );
+          })}
       </div>
 
       <div className="footer">

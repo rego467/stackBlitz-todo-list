@@ -30,9 +30,10 @@ export default function EditTodo() {
   }, []);
 
   const handleInput = (e) => {
-    const clone = { ...input };
-    clone[e.target.name] = e.target.value;
-    setInput(clone);
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const mutation = useMutation((updateNote) => editNote(id, updateNote), {
