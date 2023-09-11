@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f9f5f6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* main */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* end main */
+
+/* card */
+.card {
+  border: 2px solid black;
+  background-color: #a18af1;
+  padding-left: 10px;
+  border-radius: 9px;
+  padding: 20px 10px;
+  flex-basis: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-card {
+  display: flex;
+  margin: 10px 10px;
+  flex-basis: 360px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+/* end card */
+
+/* navbar */
+.navbar {
+  margin: 0 auto;
+  padding: 15px;
+}
+.isi-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.h1-navbar {
+  color: #614bc3;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+}
+.button-add {
+  padding: 10px;
+  background-color: #614bc3;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid #614bc3;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+/* end nvbr */
+
+.button {
+  padding: 7px;
+  border: 2px solid blue;
+  background-color: blue;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.link-edit {
+  border: 2px solid blue;
+  background-color: blue;
+  padding: 7px;
+  width: 80px;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.h1-card {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.h4-card {
+  line-height: 150%;
+  font-size: 18px;
+  padding: 10px 0px;
+  font-weight: 200;
+}
+
+.bottom {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+.footer {
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #a18af1;
+  text-align: center;
+  padding: 19px;
+}
+.h1-footer {
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* loading */
+.loading {
+  background-color: pink;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/* end loading */
