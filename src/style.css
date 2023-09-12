@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -26,8 +27,7 @@ body {
 
 /* card */
 .card {
-  border: 2px solid black;
-  background-color: #a18af1;
+  border: 2px solid #614bc3;
   padding-left: 10px;
   border-radius: 9px;
   padding: 20px 10px;
@@ -146,3 +146,32 @@ body {
   display: flex;
 }
 /* end loading */
+
+/* search */
+.container-search {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  gap: 5px;
+}
+.buttons {
+  background-color: #614bc3;
+  padding: 11px;
+  border-radius: 8px;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+/* end search */

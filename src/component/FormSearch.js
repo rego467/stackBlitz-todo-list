@@ -17,18 +17,20 @@ const FormSearch = ({ setTextForm }) => {
   };
 
   return (
-    <div>
-      <h1>search pages</h1>
-      <form>
+    <div className="container-search">
+      <div className="search">
         <input
           type="text"
           value={form.search}
           name="search"
           placeholder="search you want!!"
           onChange={handleForm}
+          className="inputs"
         />
-        <button onClick={handleButton}>send</button>
-      </form>
+        <button onClick={handleButton} className="buttons">
+          send
+        </button>
+      </div>
     </div>
   );
 };

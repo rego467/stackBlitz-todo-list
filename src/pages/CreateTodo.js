@@ -25,7 +25,7 @@ export default function CreateTodo() {
   //   setTodos([...todos, { id: random(arr), ...input }]);
   //   navigate('/');
   // };
-  
+
   const mutation = useMutation({
     mutationFn: addNewNote,
     onSuccess: () => {
@@ -37,9 +37,10 @@ export default function CreateTodo() {
   });
 
   const handleInput = (e) => {
-    const clone = { ...input };
-    clone[e.target.name] = e.target.value;
-    setInput(clone);
+    setInput({
+      ...input,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const sendTodo = async (e) => {
